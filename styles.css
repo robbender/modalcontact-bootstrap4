@@ -1,0 +1,13 @@
+body {
+  margin: 50px;
+  background: url(assets/bglight.png);
+}
+
+.well {
+  background: #fff;
+  text-align: center;
+}
+
+.modal {
+  text-align: left;
+}
