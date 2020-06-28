@@ -1,6 +1,6 @@
 
 # Modal Contact form - eMail
-
+ Updated to Bootstrap 4
 # Based on : [how-to-build-a-modal-contact-form-in-twitter-bootstrap](http://untame.net/2013/05/how-to-build-a-modal-contact-form-in-twitter-bootstrap-with-php-ajax/)
 
 # ... and Bootstrap framework
@@ -28,4 +28,4 @@ Read the [Getting started page](http://getbootstrap.com/getting-started/) for in
 
 ## no-Copyright and license
 
-Code released GPLv2 [GPLv2](LICENSE). 
+Code released GPLv2 [GPLv2](LICENSE).

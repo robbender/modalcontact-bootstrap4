@@ -4,22 +4,32 @@
 	 Modal Contact Demo, 2013
 -->
 
+<!-- Updated to BS4 by Robb 2020 -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<title>Twitter Bootstrap Modal Contact Form Demo</title>
+	<title>Find Out More</title>
 	<meta name="description" content="Creating Modal Window with Twitter Bootstrap">
-	<link href="assets/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+
+	<!-- <link href="assets/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- <script src="assets/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="css/styles.css">
 
 </head>
+
 <body>
 
-<div class="container">
-	<div class="well well-large">
-		<h2>Twitter Bootstrap Modal Contact Form Demo</h2>
-		<div id="form-content" class="modal hide fade in" style="display: none;">
+	<div class="container">
+		<!-- <div class="well well-large"> -->
+		<h2>Find Out More</h2>
+
+		<!-- First Modal -->
+		<!-- <div id="form-content" class="modal hide fade in" style="display: none;">
 			<div class="modal-header">
 				<a class="close" data-dismiss="modal">×</a>
 				<h3>Send me a message</h3>
@@ -36,16 +46,106 @@
 			</div>
 			<div class="modal-footer">
 				<input class="btn btn-success" type="submit" value="Send!" id="submit">
-				<a href="#" class="btn" data-dismiss="modal">Nah.</a>
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+			</div>
+		</div> -->
+		<!-- End of First Modal -->
+
+		<!-- Test BS4 Modal -->
+		<div class="modal fade" id="form-content" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<form class="contact" name="contact">
+
+							<div class="form-group">
+								<label for="name">
+									Name:</label>
+								<input type="text" class="form-control" id="name" name="name" required maxlength="50">
+							</div>
+
+							<div class="form-group">
+								<label for="email">
+									Email:</label>
+								<input type="email" class="form-control" id="email" name="email" required maxlength="50">
+							</div>
+
+							<div class="form-group">
+								<label for="name">
+									Message:</label>
+								<textarea class="form-control" type="textarea" name="message" id="message" placeholder="Your Message Here" maxlength="6000" rows="7"></textarea>
+							</div>
+						</form>
+
+					</div>
+					<div class="modal-footer">
+						<input class="btn btn-primary" type="submit" value="Send" id="submit" data-dismiss="modal">
+						<!-- <button type="submit" class="btn btn-primary" id="submit">Send</button> -->
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+					</div>
+				</div>
 			</div>
 		</div>
-		<div id="thanks"><p><a data-toggle="modal" href="#form-content" class="btn btn-primary btn-large">Modal powers, activate!</a></p></div>
-	</div>
-</div>
+		<!-- End of Test BS4 Modal -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="assets/bootstrap.min.js"></script>
-<script src="form.js"></script>
+		<!-- Repsonse Modal -->
+		<div id="Response">
+			<div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<?php
+									echo "TEST";
+							?>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Response Modal  -->
+
+			<p><a data-toggle="modal" href="#form-content" class="btn btn-primary btn-large">Contact Us</a></p>
+		</div>
+		<!-- </div> -->
+	</div>
+
+	<!-- Footer-->
+	<!-- <footer class="bg-light py-5">
+    <div class="container">
+			<a href="#" class="btn btn-primary previous">&laquo; Previous</a>
+      <div class="small text-center text-muted">Copyright © 2020 - Robert Bender Creative - Start Bootstrap</div>
+    </div>
+  </footer> -->
+
+	<!-- <script src="assets/bootstrap.min.js"></script> -->
+	<!-- Bootstrap core JS-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap core JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+	<!-- JS-->
+	<script src="form.js" charset="utf-8"></script>
 
 </body>
 
